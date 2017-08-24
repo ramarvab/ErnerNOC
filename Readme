@@ -1,0 +1,31 @@
+Go to Command Line and Navigate to Folder ErnerNOC folder
+
+# To run Part1.py
+
+python part1.py <path to data stream folder>
+
+e.g.: python part1.py /User/rama.arvabhumi/Dekstop/ErnerNoc/all-data/csv
+
+# To run Part2.py
+
+python part2.py <path to data stream folder>
+
+e.g.: python part2.py /User/rama.arvabhumi/Dekstop/ErnerNoc/all-data/csv
+
+#To run part2pandas.py
+
+python part2pandas.py <path to data stream folder>
+e.g.: python part2.py /User/rama.arvabhumi/Dekstop/ErnerNoc/all-data/csv
+
+#To run ExtraCredit.py
+
+python ExtraCredit.py <path to data stream folder>
+e.g.: python ExtraCredit.py /User/rama.arvabhumi/Dekstop/ErnerNoc/all-data/csv
+
+#To run FetchingData.py
+
+python FetchingData.py
+
+e.g.: python part2pandas.py /User/rama.arvabhumi/Dekstop/ErnerNoc/all-data/csv
+
+# for running unit test cases, i extracted a datastream from the folder and ran unit tests on that file.
