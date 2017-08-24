@@ -6,7 +6,7 @@ import numpy as np
 import sqlite3
 import time,datetime
 
-path = "/Users/rama.arvabhumi/Desktop/Erner/all-data/csv"
+#path = "/Users/rama.arvabhumi/Desktop/Erner/all-data/csv"
 #file = path+"/6.csv"
 
 conn = sqlite3.connect('ErnerNOC')
@@ -14,7 +14,7 @@ conn = sqlite3.connect('ErnerNOC')
 c = conn.cursor()
 
 #create table
-c.execute('Create TABLE if not exists HourlyStats(id INT,date DATETIME, total REAL,minimum REAL, maximum REAL, mean REAL,median REAL)')
+#c.execute('Create TABLE if not exists HourlyStats(id INT,date DATETIME, total REAL,minimum REAL, maximum REAL, mean REAL,median REAL)')
 def consolidate(values):
 	return round(sum(values),4), min(values), max(values), round(statistics.mean(values),4), round(statistics.median(values),4)
 
@@ -61,9 +61,9 @@ if __name__ == '__main__':
 	conn = sqlite3.connect('ErnerNOC')
 	c = conn.cursor()
 	# create table
-	c.execute('DELETE FROM HourlyStats')
+	#c.execute('DELETE FROM HourlyStats')
 	#c.execute('DELETE FROM DailyStats')
-	c.execute('Drop TABLE HourlyStats')
+	#c.execute('Drop TABLE HourlyStats')
 	c.execute('Create TABLE if not exists HourlyStats(id INT,date DATETIME, total REAL,minimum REAL, maximum REAL, mean REAL,median REAL,filename TEXT)')
 	c.execute('Create TABLE if not exists DailyStats(id INT,date DATETIME, total REAL,minimum REAL, maximum REAL, mean REAL,median REAL,filename TEXT)')
 	if len(sys.argv) !=2:
